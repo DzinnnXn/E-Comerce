@@ -18,10 +18,13 @@ def main():
         print("Bem vindo a Loja do Cacique")
         print("[1] - Cadastro")
         print("[2] - Ver Produtos")
-        print("[3] - Adicionar ao Carrinho")
-        print("[4] - Remover do Carrinho")
-        print("[5] - Ver Carrinho")
-        print("[6] - Sair")
+        print("[3] - Adicionar Produtos")
+        print("[4] - Remover Produtos")
+        print("[5] - Adicionar ao Carrinho")
+        print("[6] - Remover do Carrinho")
+        print("[7] - Ver Carrinho")
+        print("[8] - Ver Dados do Usuario")
+        print("[9] - Sair")
         print("Digite o numero equivalente a opção que deseja")
         try:
             menu = int(input(">>"))
@@ -49,6 +52,14 @@ def main():
                     
                 case 3:
                     limpar()
+                    pause()
+                
+                case 4:
+                    limpar()
+                    pause()
+                    
+                case 5:
+                    limpar()
                     print("ADICIONAR AO CARRINHO")
                     Carrinho_Usuario.listar_produtos_loja()
                     print("Digite o indice do produto que deseja")
@@ -57,7 +68,7 @@ def main():
                     print("Produto Adicionado ao Carrinho!!")
                     pause()
                 
-                case 4:
+                case 6:
                     limpar()
                     print("EXCLUIR PRODUTO DO CARRINHO")
                     Carrinho_Usuario.listar_produtos_carrinho()
@@ -66,12 +77,17 @@ def main():
                     Carrinho_Usuario.delProduto_carrinho(vetor_carrinho)
                     pause()
                     
-                case 5:
+                case 7:
                     limpar()
                     Carrinho_Usuario.listar_produtos_carrinho()
                     pause()
+                    
+                case 8:
+                    limpar()
+                    Carrinho_Usuario.dadosClientes()
+                    pause()
                 
-                case 6:
+                case 9:
                     limpar()
                     print("Saindo...")
                     pause()
