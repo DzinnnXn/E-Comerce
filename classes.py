@@ -14,6 +14,12 @@ class Carrinho_Compra:
         self.cpf = cpf
         self.tel = tel        
         self.cliente[self.id] = [self.nome, self.cpf, self.tel]
+        
+    def dadosClientes(self):
+        for chave,valor in self.cliente.items():
+            print(f"ID:{chave} - Nome: {valor[0]} - CPF: {valor[1]} - Telefone: {valor[2]}")
+        
+    
 
     def inserir_produto_loja(self, produto):
         self.produto = produto
