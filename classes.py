@@ -7,7 +7,6 @@ class Carrinho_Compra:
     lista_loja = []
     lista_carrinho = []
     
-    #FUNCIONALIDADE DA LISTA DE PRODUTOS DA LOJA
     def cadastrarCliente(self, id, nome, cpf, tel):
         self.id = id
         self.nome = nome
@@ -18,9 +17,17 @@ class Carrinho_Compra:
     def dadosClientes(self):
         for chave,valor in self.cliente.items():
             print(f"ID:{chave} - Nome: {valor[0]} - CPF: {valor[1]} - Telefone: {valor[2]}")
+            
+    def criar_produto(self, nome_produto, valor):
+        self.nome = nome_produto
+        self.valor = valor
+        
+        novo_produto = Produtos(self.nome, self.valor)
+        self.lista_loja.append(novo_produto)
+        print(f"Produto '{nome_produto}' foi adicionado à lista da loja.")
         
     
-
+    #FUNCIONALIDADE DA LISTA DE PRODUTOS DA LOJA
     def inserir_produto_loja(self, produto):
         self.produto = produto
         self.lista_loja.append(self.produto)
