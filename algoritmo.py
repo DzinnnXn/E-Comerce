@@ -9,7 +9,6 @@ Carrinho_Usuario.inserir_produto_loja(n2)
 Carrinho_Usuario.inserir_produto_loja(n3)
 
 def main():
-    contProdut = 0
     contID = 0
     s = 0
     while s == 0:
